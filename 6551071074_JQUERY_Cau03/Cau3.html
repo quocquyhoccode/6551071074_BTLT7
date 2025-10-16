@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <Title>Insert row in a table</Title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#insertBtn").click(function(){
+            var newRow = $("<tr>");
+            newRow.append("<td>New Row Cell1</td>");
+            newRow.append("<td>New Row Cell2</td>");
+            $("#sampleTable").append(newRow);
+        });
+    });
+    </script>
+</head>
+    <body>
+        <table id="sampleTable" border="1">
+            <tr>
+                <td>Row1 Cell1</td>
+                <td>Row1 Cell2</td>
+            </tr>
+            <tr>
+                <td>Row2 Cell1</td>
+                <td>Row2 Cell2</td>
+            </tr>
+        </table>
+        <br>
+        <input type="button" id="insertBtn" value="Insert row">
+    </body>
+</html>
